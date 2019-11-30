@@ -58,35 +58,76 @@
         <section id="sec-project">
             <h1>Projecten</h1>
             <section class="projecten">
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
+                <article><img src="./img/nature.png" alt=""></article>
+                <article><img src="./img/nature.png" alt=""></article>
+                <article><img src="./img/nature.png" alt=""></article>
+                <article><img src="./img/nature.png" alt=""></article>
+                <article><img src="./img/nature.png" alt=""></article>
+                <article><img src="./img/nature.png" alt=""></article>
+                <article><img src="./img/nature.png" alt=""></article>
+                <article><img src="./img/nature.png" alt=""></article>
+                <article><img src="./img/nature.png" alt=""></article>
             </section>
         </section>
+
         <section id="sec-overmij">
             <h1>Over mij</h1>
+            <h2>Wie ben ik?</h2>
+            <section class="overmij">
+                <div class="blok-een">
+                    <p>Ook hallo, ik ben <a href="aboutme.html">Mike Hovenier</a> ben 21 jaar oud en woon in het kleine dorpje Velserbroek (in de buurt van Haarlem). Op dit moment volg ik de opleiding Communcation &amp; Multimedia Design (CMD) leerjaar twee op de Hogeschool van Amsterdam. Voordat ik begon met deze opleiding, heb ik er al een MBO-4 diploma binnen gehaald. Dit was op het Media College in Amsterdam als Interactief Vormgever (deze opleiding bestaat alleen niet meer).</p>
+                    <br>
+                    <p>Ook heb ik twee keer vijf maanden gewerkt bij twee verschillende design bedrijven als stagair in het design team. De eerste stage was bij. <a href="https://justpremium.com/" target="_blank">JustPremium</a>, de andere stage was bij <a href="https://www.uwsupermarkt.nl/" target="_blank">UwSupermarkt</a> (nee dit is geen supermarkt).</p>
+                    <br>
+                    <p>Op dit moment ben ik opzoek naar een design/frondtend stage binnen mijn vakgebied voor 10 weken. Deze stage zou duren van 3 februari 2020 t/m 10 april 2020. Intressen? Neem dan gerust contact met mij op via: <a href="mailto:mikehovje@gmail.com">mikehovje@gmail.com</a>.</p>
+
+                    <button>Contact opnemen</button>
+                </div>
+                <div class="blok-twee">
+                    <img src="./img/mikehovenier.png" alt="Foto van Mike Hovenier">
+                    <p>Mike Hovenier</p>
+                </div>
+
+            </section>
+
         </section>
         <section id="sec-contact">
             <h1>Contact</h1>
+            <section class="contact">
+                <form action="mailto:mikehovje@gmail.com" method="post">
+                    <fieldset>
+                        <fieldset class="legendstyle">
+                            <legend>Contact formulier:</legend>
+                        </fieldset>
+                        <label for="firstname">Volledige naam:</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Uw naam..." required>
+                        <label for="emailadres">Email-adres:</label>
+                        <input type="email" name="emailadres" id="emailadres" placeholder="voorbeeld@outlook.com" required>
+                        <label for="message">Uw bericht:</label>
+                        <textarea name="message" id="message" required></textarea>
+                    </fieldset>
+                    <button type="submit">Verzenden</button>
+                </form>
+            </section>
         </section>
 
+        <script src="script.js"></script>
     </main>
 
 
     <footer>
+        <p>Contacteren &nbsp; &#124; &nbsp; <a href="mailto:mikehovje@gmail.com">mikehovje@gmail.com</a>.</p>
+        <p class="copyright">Copyright 2019 &nbsp; &#124; &nbsp; <a href="aboutme.html">Mike Hovenier</a></p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/mike.hovenier" target="_blank"><img src="./img/facebook.png" alt="Facebook Mike Hovenier"></a>
+            <a href="https://www.instagram.com/mijkjeh/?hl=nl" target="_blank"><img src="./img/instagram.png" alt="Instagram Mike Hovenier"></a>
+            <a href="https://www.linkedin.com/in/mike-h-310652120/" target="_blank"><img src="./img/linkedin.png" alt="Linkedin Mike Hovenier"></a>
+        </div>
         <!-- https://www.youtube.com/watch?v=5RoXCs54CN8 -->
         <!-- https://stackoverflow.com/questions/5012111/how-to-position-a-div-in-the-middle-of-the-screen-when-the-page-is-bigger-than-t -->
         <!-- https://www.youtube.com/watch?v=ixodBbIC2dQ -->
+        <!-- https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load -->
     </footer>
-
-    <script href="script.js"></script>
 </body>
 
 </html>

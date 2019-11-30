@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* color scheme 
+- Blue: -------- Maincolor1: --- #415B76
+- Dark-blue: --- Maincolor2: --- #233656
+- Green: ------- Secondcolor: -- #18C29C
+- Black: ------- Textcolor: ---- #333
+- White: ------- Textcolor2: --- #ffffff
+- Gray: -------- Bordercolor: -- #c9c9c9
+*/
+
+body {
+    background-color: #18C29C;
+    font-family: sans-serif;
+}
+
+
+/* FONTS ---------------------------------------------------------- */
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+
+/*--NAV-----------------------------------------------------------*/
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav a {
+    display: block;
+
+    text-decoration: none;
+    padding: 1.1em 1.5em;
+    color: white;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.48);
+
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    color: #18C29C;
+    text-shadow: none;
+    transform: translateY(2px);
+}
+
+/*--SECTIONS-----------------------------------------------------------*/
+
+#sec-project {
+    height: 100vh;
+    width: 100vw;
+    display: inline-block;
+    background-color: white;
+}
+
+#sec-overmij {
+    height: 100vh;
+    width: 100vw;
+    display: inline-block;
+    background-color: white;
+}
+
+#sec-contact {
+    height: 100vh;
+    width: 100vw;
+    display: inline-block;
+    background-color: white;
+}
+
+
+/* ACHTERGROND ---------------------------------------------------------- */
+
+#achtergrond-home {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('./img/nature2.png');
+    background-size: cover;
+    position: relative;
+
+    /*    background: linear-gradient(to left, #415B76, #18C29C);*/
+}
+
+
+/* ANIMATIE ACHTERGROND ---------------------------------------------------------- */
+
+.animatie-blok {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.animatie-blok li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 6em;
+    height: 6em;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 20s linear infinite;
+    bottom: -10em;
+}
+
+.animatie-blok li:nth-child(1) {
+    left: 86%;
+    width: 5em;
+    height: 5em;
+    animation-delay: 0s;
+}
+
+.animatie-blok li:nth-child(2) {
+    left: 18%;
+    width: 2em;
+    height: 2em;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+
+.animatie-blok li:nth-child(3) {
+    left: 70%;
+    width: 9em;
+    height: 9em;
+    animation-delay: 5.5s;
+}
+
+.animatie-blok li:nth-child(4) {
+    left: 42%;
+    width: 8em;
+    height: 8em;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.animatie-blok li:nth-child(5) {
+    left: 60%;
+    width: 3em;
+    height: 3em;
+    animation-delay: 0s;
+}
+
+.animatie-blok li:nth-child(6) {
+    left: 25%;
+    width: 6em;
+    height: 6em;
+    animation-delay: 3.5s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* MIDDEN BLOK ---------------------------------------------------------- */
+
+.middenblok-home {
+    position: absolute;
+    display: block;
+
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+
+    max-width: 20em;
+    max-height: 20em;
+
+    border: 1px solid #18C29C;
+    padding: 1em;
+    transition: all 0.2s ease;
+}
+
+.middenblok-home div {}
+
+.middenblok-home img {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 2px 3px 14px rgba(0, 0, 0, 0.46);
+
+    margin-bottom: 0.8em;
+
+    transition: all 0.2s ease;
+}
+
+.middenblok-home img:hover {
+    transform: scale(1.05);
+}
+
+.middenblok-home h1 {
+    text-align: center;
+    color: #18C29C;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.48);
+}
+
+.middenblok-home p {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.53);
+}
+
+/* TEST ---------------------------------------------------------- */
+
+.animatie-tekst {
+    color: white;
+    /*    border: 1px solid red;*/
+    height: 2em;
+    width: 20em;
+    overflow: hidden;
+    margin: auto;
+}
+
+.animatie-tekst p {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1em;
+    padding: 0.5em;
+}
+
+.animatie-tekst p:first-child {
+    animation: animatietekst 25s infinite;
+}
+
+@keyframes animatietekst {
+    0% {
+        margin-top: 0em;
+    }
+
+    23% {
+        margin-top: 0em;
+    }
+
+    25% {
+        margin-top: -2em;
+    }
+
+    48% {
+        margin-top: -2em;
+    }
+
+    50% {
+        margin-top: -4em;
+    }
+
+    73% {
+        margin-top: -4em;
+    }
+
+    75% {
+        margin-top: -6em;
+    }
+
+    98% {
+        margin-top: -6em;
+    }
+
+    100% {
+        margin-top: 0em;
+    }
+}
+
+
+/*--SECTION PROJECTEN-----------------------------------------------------------*/
+
+#sec-project h1,
+#sec-overmij h1,
+#sec-contact h1 {
+    color: #415B76;
+    margin-left: 1.5em;
+    margin-top: 1em;
+}
+
+.projecten {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    border: 1px solid blue;
+}
+
+article {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+
+    margin: 1em;
+}
+
+
+/* FOOTER ---------------------------------------------------------- */
+
+footer {
+    width: 100vw;
+    height: 5em;
+    background-color: #233656;
+}

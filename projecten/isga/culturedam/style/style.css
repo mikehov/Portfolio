@@ -1,0 +1,1003 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Kopfont;
+    src: url(../fonts/DDCHardware-Compressed.otf);
+}
+
+@font-face {
+    font-family: Subfont;
+    src: url(../fonts/DDCHardware-Regular.otf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+/* ----------------------------- */
+
+
+/* breedte van de telefoon aanpassen */
+/* laat de min-height staan zodat je kunt scrollen indien nodig */
+body {
+    box-sizing: border-box;
+    /*    max-width: 375px;*/
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+/* geen witruimte & afbeeldingen centreren*/
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* de class .horizontal zet elementen binnen dat element naast elkaar */
+.horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+/* de class .horizontal zet elementen binnen dat element onder elkaar */
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+/* met de class .flex kun je één element alle overige ruimte in laten nemen */
+.flex {
+    flex-grow: 1;
+}
+
+/* met de class .space-between verdeel je de overige ruimte tussen de elementen */
+.space-between {
+    justify-content: space-between;
+}
+
+/* om de onderkant vast te zetten aan de pagina,
+gebruik .bottom-fixed op de body en .fixed-bottom het element dat in beeld moet blijven */
+body.bottom-fixed {
+    padding-bottom: 60px;
+}
+
+*.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+}
+
+/* om de bovenkant vast te zetten aan de pagina,
+gebruik .top-fixed op de body en .fixed-top het element dat in beeld moet blijven */
+body.top-fixed {
+    padding-top: 60px;
+}
+
+*.fixed-top {
+    position: fixed;
+    top: 0;
+}
+
+/* ----------------------------- */
+
+h1 {
+    font-family: Kopfont, sans-serif;
+}
+
+h2 {
+    font-family: Subfont, sans-serif;
+}
+
+p {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+}
+
+a {
+    font-family: Roboto, sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+
+.navigation {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+}
+
+.navigation a.back img {
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    height: 65px;
+}
+
+.navigation a.nav img {
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    height: 65px;
+}
+
+.navigationpopup {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    top: 100%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.navigationpopup.active {
+    top: 130px;
+    z-index: 10;
+}
+
+.homeblok.active {
+    margin-top: 0px;
+}
+
+.navigationpopup img {
+    width: 49.5%;
+    height: auto;
+    display: flex;
+    margin-top: 4px;
+    /*    position: absolute;*/
+}
+
+.navigationpopupleft {
+    float: left;
+}
+
+.navigationpopupright {
+    float: right;
+}
+
+.navigationpopuprightmidden {
+    float: right;
+    position: absolute;
+    top: 250px;
+    left: 57px;
+}
+
+img.navigationpopuprightmidden {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: absolute;
+}
+
+.homeimg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.loginimg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/login.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.cameraimg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/camera.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.textimg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/textimg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.whiteimg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.homeblok {
+    width: 100%;
+    height: auto;
+    background-color: #5F4D8A;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-top: 60px;
+    transition: 0.5s;
+}
+
+.homeblok h1 {
+    font-size: 4em;
+    color: white;
+    text-align: center;
+}
+
+.homeblok h2 {
+    font-size: 1.6em;
+    color: white;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.buttoncenter {
+    text-align: center;
+    margin-top: 350px;
+}
+
+.fourzerofour {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.fourzerofour a {
+    color: white;
+    display: inline;
+    margin: auto 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #F8A541;
+    font-size: 2.5em;
+    font-family: Kopfont, sans-serif;
+    text-decoration: none;
+}
+
+h1.fourzerofour {
+    color: white;
+    font-size: 5em;
+    margin-top: 40px;
+    text-align: center;
+}
+
+p.fourzerofour {
+    color: white;
+    font-size: 1.7em;
+    text-align: center;
+    margin-top: 180px;
+    /*    position: absolute;*/
+    padding: 20px 20px;
+    background-color: rgb(95, 77, 138, 0.9);
+}
+
+.buttoncenter a {
+    color: white;
+    display: inline;
+    margin: auto 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #F8A541;
+    font-size: 2.5em;
+    font-family: Kopfont, sans-serif;
+    text-decoration: none;
+}
+
+.blok {
+    width: 100%;
+    height: auto;
+    background-image: url('../img/login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.blokcolor {
+    background-color: rgba(95, 77, 138, 0.8);
+    padding: 10px 0px 20px 0px;
+}
+
+.blok h1 {
+    font-size: 4em;
+    color: white;
+    text-align: center;
+}
+
+.blok h2 {
+    font-size: 1.6em;
+    color: white;
+    text-align: center;
+    margin-top: -10px;
+}
+
+/*--*/
+
+section.login {
+    width: 100%;
+    position: absolute;
+    display: inline;
+}
+
+fieldset {
+    border: none;
+    height: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+}
+
+label {
+    font-family: Kopfont, sans-serif;
+    font-size: 1.8em;
+    color: white;
+}
+
+input {
+    font-family: Roboto, sans-serif;
+    font-size: 1em;
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 15px;
+    border: 3px solid #F8A541;
+    border-radius: 5px;
+    color: white;
+    box-sizing: border-box;
+    background-color: rgba(51, 51, 51, 0.3);
+}
+
+input#password {
+    margin-bottom: 0px;
+}
+
+#loginbutton {
+    border: none;
+    height: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+}
+
+#loginbutton input {
+    color: white;
+    text-align: center;
+    font-family: Kopfont, sans-serif;
+    font-size: 2.5em;
+    background-color: #F8A541;
+    box-sizing: border-box;
+}
+
+/*--*/
+
+.map {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    position: absolute;
+}
+
+.map img.map {
+    height: auto;
+    width: 100%;
+}
+
+.map a img.dot {
+    width: 60px;
+    height: auto;
+    position: absolute;
+}
+
+.map a img.dotje {
+    /*lui*/
+    margin-left: 70px;
+    margin-top: 250px;
+    width: 60px;
+    height: auto;
+    position: absolute;
+}
+
+.map a.dotone {
+    margin-left: 70px;
+    margin-top: 250px;
+}
+
+.map a.dotone img {
+    margin-left: 70px;
+    margin-top: 250px;
+}
+
+.map a.dottwo {
+    right: 20px;
+    margin-top: 400px;
+}
+
+.map a.dottwo img {
+    right: 20px;
+    margin-top: 400px;
+}
+
+.map img.arrow {
+    opacity: 0.999;
+    margin-top: 230px;
+    width: 50px;
+    height: auto;
+}
+
+.map a img.arrowbutton {
+    right: 10px;
+    bottom: 70px;
+    width: 70px;
+    height: auto;
+    position: fixed;
+}
+
+.mapinfodotone {
+    width: 90%;
+    height: auto;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 200px;
+}
+
+.mapinfodottwo {
+    width: 90%;
+    height: auto;
+    position: absolute;
+    right: 15px;
+    margin-top: 350px;
+}
+
+a.dotonetje {
+    /*    margin-left: 70px;*/
+    margin-top: 250px;
+}
+
+/*--*/
+
+.takephoto img {
+    width: 100px;
+}
+
+.takephoto {
+    width: 100%;
+    height: auto;
+    bottom: 20px;
+    position: fixed;
+}
+
+/*--*/
+
+.permissionphoto {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-color: #5F4D8A;
+    box-sizing: border-box;
+    /*    position: absolute;*/
+    margin-top: 160px;
+}
+
+.permissionphoto p {
+    margin-left: 0px;
+    margin-right: 10px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.permissionphotobutton {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.permissionphotobutton a {
+    color: white;
+    display: inline;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #F8A541;
+    font-size: 1.7em;
+    font-family: Kopfont, sans-serif;
+    text-decoration: none;
+}
+
+/*--*/
+
+.cameraplaatje {
+    background-color: red;
+    width: 100%;
+    height: auto;
+}
+
+.cameraplaatje a img {
+    width: 100%;
+    height: 130px;
+}
+
+.cameratekst {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.cameratekst h2 {
+    color: #B33F53;
+    margin-bottom: 10px;
+}
+
+.cameratekst input {
+    border: 0px;
+    border-bottom: solid #333 2px;
+    background: transparent;
+    border-radius: 0px;
+    color: #333;
+    padding: 0;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.cameratekst .camerateksttwee {
+    width: 100%;
+}
+
+.cameratekst .camerateksttwee {
+    width: 100%;
+    height: auto;
+    bottom: 60px;
+    position: fixed;
+    text-align: center;
+    margin-left: -20px;
+}
+
+.cameratekst a {
+    color: white;
+    display: inline;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #F8A541;
+    font-size: 1.7em;
+    font-family: Kopfont, sans-serif;
+    text-decoration: none;
+}
+
+/*--*/
+
+.memoryplaatjes {
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.memoryplaatjes a img {
+    width: 31%;
+    height: auto;
+    display: inline-flex;
+}
+
+.editicon img {
+    width: 50px;
+    height: auto;
+    position: fixed;
+    right: 10px;
+    margin-top: -27px;
+}
+
+/*--*/
+
+.memoryplaatje {
+    background-color: red;
+    width: 100%;
+    height: auto;
+}
+
+.memoryplaatje a img {
+    width: 100%;
+    height: 130px;
+}
+
+.memorytekst {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.memorytekst h2 {
+    color: #B33F53;
+    margin-bottom: 10px;
+    font-family: Kopfont, sans-serif;
+}
+
+.memorytekstt a h2 {
+    color: #B33F53;
+    margin-top: 10px;
+    font-family: Kopfont, sans-serif;
+    margin-left: 10px;
+}
+
+.memorytekst input {
+    border: 0px;
+    border-bottom: solid #333 2px;
+    background: transparent;
+    border-radius: 0px;
+    color: #333;
+    padding: 0;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.memorytekst .memoryteksttwee {
+    width: 100%;
+}
+
+.memorytekst .memoryteksttwee {
+    width: 100%;
+    height: auto;
+    bottom: 60px;
+    position: fixed;
+    text-align: center;
+    margin-left: -20px;
+}
+
+.memorytekst a {
+    color: white;
+    display: inline;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #F8A541;
+    font-size: 1.7em;
+    font-family: Kopfont, sans-serif;
+    text-decoration: none;
+}
+
+/*--*/
+
+.photoone {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo1big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.phototwo {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo2big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.photothree {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo3big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.photofour {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo4big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.photofive {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo5big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.photosix {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo6big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.photoseven {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo7big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.photoeight {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo8big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.photonine {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo9big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.phototen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo10big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.photoelf {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo11big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.phototwelve {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo12big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.photothirteen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo13big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.photofourteen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo14big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.photofiveteen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/photo15big.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.arrowphoto {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-top: 250px;
+}
+
+.arrowphoto a {
+    margin-left: 15px;
+}
+
+.arrowphoto a.rightarrow img {
+    right: 15px;
+    position: absolute;
+}
+
+.arrowphoto a img {
+    width: 40px;
+    height: auto;
+    display: inline;
+}
+
+.titlephoto h2 {
+    background-color: #B33F53;
+    color: white;
+    padding: 10px;
+    display: inline;
+    position: absolute;
+}
+
+.titlephoto {
+    width: auto;
+    height: auto;
+}
+
+/*--*/
+
+.search {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.search input {
+    border: solid #5F4D8A 3px;
+    background: transparent;
+    border-radius: 0px;
+    color: #333;
+    padding: 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    font-family: Kopfont, sans-serif;
+    margin-bottom: 0px;
+}
+
+/*--*/
+
+.adventureboven {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    position: absolute;
+    display: block;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.adventureboven h2.adventureboveneen {
+    color: white;
+    background-color: #B33F53;
+    display: inline;
+    left: 10px;
+    position: absolute;
+    padding: 10px;
+}
+
+.adventureboven h2.adventureboventwee {
+    color: white;
+    background-color: #F8A541;
+    display: inline;
+    right: 10px;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.events {
+    width: 100%;
+    height: auto;
+}
+
+.events a img {
+    width: 100%;
+/*    position: absolute;*/
+    display: block;
+/*    margin-top: 80px;*/
+    margin-bottom:5px;
+}
+
+.tekstadventure {
+    width: 100%;
+    height: auto;
+}
+
+.tekstadventure p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.tekstadventure a p {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #B33F53;
+    margin-top: 5px;
+    font-family: Kopfont, sans-serif;
+}
+
+.tekstadventure img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/*--*/
+
+.adventureplaatjes {
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.adventureplaatjes a img {
+    width: 17%;
+    height: auto;
+    display: inline-flex;
+}

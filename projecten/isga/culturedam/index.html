@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style/style.css">
+    <meta charset="UTF-8" />
+    <meta name="description" content="An mobile web-app for international students in Amsterdam.">
+    <meta name="keywords" content="International, Students, Netherlands, Holland, Amsterdam">
+    <meta name="author" content="Mike Hovenier">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/icon.png">
+    <title>Culturedam</title>
+</head>
+
+<body class="homeimg">
+    <header>
+
+    </header>
+
+    <main>
+        <div class="homeblok">
+            <h1>Culturedam</h1>
+            <h2>The city as a memory</h2>
+        </div>
+
+        <div class="navigationpopup" id="navigationpopupoverlay">
+            <a href="./adventure.html"><img src="./img/adventurenav.png" class="navigationpopupleft" alt="Adventure Nav"></a>
+            <a href="./memory.html"><img src="./img/memorynav.png" class="navigationpopupright" alt="Memory Nav"></a>
+            <a href="./camerafirst.html"><img src="./img/cameranav.png" class="navigationpopupleft" alt="Camera Nav"></a>
+            <a href="./map.html"><img src="./img/mapnav.png" class="navigationpopupright" alt="Map Nav"></a>
+            <a href="./404.html"><img src="./img/midden.png" class="navigationpopuprightmidden" alt="Book Nav"></a>
+        </div>
+        <div class="buttoncenter">
+            <a href="adventure.html" id="test">Adventure Time</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="navigation">
+            <!--                <a onclick="history.back()" class="back"><img src="./img/back.png" alt=""></a>-->
+            <a href="" class="nav button"><img src="./img/nav.png" alt=""></a>
+        </div>
+        <!-- Photo's: ISN. (2018a). Glitches in time. Amsterdam, -->
+        <!-- Copyright: Mike Hovenier -->
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+    <script>
+        var menu = $("#navigationpopupoverlay, .homeblok");
+        var bttn = $(".button");
+
+        bttn.click(function(e) {
+            e.preventDefault();
+            menu.toggleClass('active');
+        });
+
+    </script>
+</body>
+
+</html>

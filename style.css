@@ -594,7 +594,7 @@ textarea {
 
 .project h2, .project p {
     max-width: 40em;
-    min-width: 20em;
+/*    min-width: 20em;*/
 }
 
 .project .blok-twee {
